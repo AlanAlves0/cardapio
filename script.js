@@ -83,25 +83,64 @@ function updateCartModal(){
             <div>
                 <p class="font-medium">${item.name}</p>
                 <p>Qtd: ${item.quantity}</p>
-                <p class="font-medium mt-2">R$ ${item.price.tofixed(2)}</p>
+                <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
 
            
-                <button>
+                <button class="remove-from-cart-btn" data-name="${item.name}">
                     Remover
                 </button>
             
         </div>
         ` 
 
-        total += item.price * item.quantity;
-
-
+        total += item.price * item.quantity
 
         cartItemsConteiner.appendChild(cartItemElement)
 
     })
 
-    cartTotal.textContent = total;
+    cartTotal.textContent = total.toLocaleString("pt-BR",{
+        style:"currency",
+        currency: "BRL"
+    });
 
+
+    cartCounter.innerHTML = cart.length;
 }
+
+//função para remmer item do carrinho
+cartItemsConteiner.addEventListener("click", function(event){
+    if(event.target.classList.contains("remove-from-cart-btn")){
+        const name = event.target.getAttribute("data-name")
+        removeItemcart(name)
+    }
+})
+
+function removeItemcart(name){
+    const index = cart.findIndex(item => item.name === name);
+    if(index !== -1){
+        const item = cart[index];
+        
+    if(item.quantity>1){
+        item.quantity -=1;
+        updateCartModal();
+        return;
+    }
+    
+    cart.splice(index, 1);
+    updateCartModal();
+    
+    }
+}
+
+addressInput.addEventListener("input", function(event){
+    let inputalue = event.target.value;
+})
+
+checkoutBtn.addEventListener("click", function(){
+    if(cart.length === 0) return;
+    if(addressInput.value === ""){
+        addressWarn.classList.remove("hiddren")
+    }
+})
