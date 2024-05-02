@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <!--Fonte-->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -18,8 +20,13 @@
     <!--header-->
     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
         <div class="w-full h-full flex flex-col justify-center items-center">
-            <img src="assets/hamb-1.png" alt="Logo devBurguer" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
-            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Dev Burguer</h1>
+            <img 
+            src="./assets/hamb-1.png" 
+            alt="Logo devBurguer" 
+            class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"/>
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
+                Dev Burguer
+            </h1>
 
             <span class="text-white font-medium">Rua dev 10, São Paulo - SP</span>
 
@@ -183,7 +190,9 @@
             <div class="flex items-center gap-2 justify-between mt-3">
                 <p class="font-bold text-lg">R$6</p>
                 <button 
-                class="bg-gray-900 px-5 rounded hover:scale-110 hover:-rotate-2 duration-300 add-to-cart-btn" data-name="Guarana lata" data-price="6">
+                class="bg-gray-900 px-5 rounded hover:scale-110 hover:-rotate-2 duration-300 add-to-cart-btn" 
+                data-name="Guarana lata" 
+                data-price="6">
                     <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
                 </div>
@@ -196,8 +205,7 @@
 
             <!--Fim Grid bebidas-->
             </div>
-        </div>
-    </div>
+     
     <!--Fim Menu-->
 
     <!--Modal Cart-->
@@ -225,14 +233,13 @@
 
             <div class="flex items-center justify-between mt-5 w-full">
                 <button id="close-modal-btn">Fechar</button>
-                <button class="bg-green-500 text-white px-4 py-1 rounded" id="checkout-btn">Finalizar pedido</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded" >Finalizar pedido</button>
             </div>
             
         </div>
 
     </div>
-
-    </div>
+</div>
 
     <!--Fim Modal Cart-->
 
@@ -240,7 +247,8 @@
     <!--Button Cart footer-->
 
     <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
-        <button class=" flex items-center gap-2 text-white font-bold"
+        <button 
+        class="flex items-center gap-2 text-white font-bold"
         id="cart-btn">
             (<span id="card-count">0</span>)
             Veja meu carrinho
@@ -249,7 +257,7 @@
     </footer>
 
     <!-- Fim Button Cart footer-->
-    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="script.js"></script>
 </body>
 </html>
