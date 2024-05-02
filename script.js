@@ -135,12 +135,13 @@ function removeItemcart(name){
 }
 
 addressInput.addEventListener("input", function(event){
-    let inputalue = event.target.value;
+    let inputValue = event.target.value;
 })
+
 
 checkoutBtn.addEventListener("click", function(){
     if(cart.length === 0) return;
     if(addressInput.value === ""){
-        addressWarn.classList.remove("hiddren")
+    addressWarn.classList.remove("hiddren")
     }
 })
