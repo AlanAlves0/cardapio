@@ -1,11 +1,10 @@
 <h1>Cardapio</h1>
 
 <h2>Sobre</h2>
- <p>Projeto de um cardapio para um restaurante</p>
+ <p>Projeto de um cardapio para um restaurante, foi criado um cardapio responsivo para um restaurante para anotar os pedidos dos clientes</p>
  <a href = "https://projeto-cardapio-theta.vercel.app">Clique aqui para acessar o projeto</a>
-
- 
-##tecnologias
+<br><br><br> 
+##Tecnologias
 <div>
   <img align="center" alt="Rafa-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
   <img align="center" alt="Rafa-Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
