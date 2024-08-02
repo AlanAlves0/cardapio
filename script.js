@@ -189,6 +189,7 @@ checkoutBtn.addEventListener("click", function(){
 
 
 //Verificar a hora e manipular o card horario
+/*
 function checkRestaurantOpen(){
 
     const data = new Date();
@@ -208,3 +209,4 @@ if(isOpen){
     spanItem.classList.remove("bg-green-600")
     spanItem.classList.add("bg-red-500")
 }
+*/
